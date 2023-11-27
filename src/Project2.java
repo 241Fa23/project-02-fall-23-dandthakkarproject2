@@ -136,5 +136,32 @@ public class Project2 {
     }
     
     
-    
+        public static void battle() {
+       
+        System.out.println("Prepare for battle!");
+        System.out.println("Press any letter then ENTER to continue...");
+        System.out.print(">>");
+        input.next();
+        System.out.println("***********************************");
+
+        player.useSpecialMove();
+       
+        boolean wins = rand.nextInt(100) < 60; // 60% chance to win the battle
+       
+        if(wins == true){
+            System.out.println("Player wins! Increase score by 2 points!");
+            player.increaseScore(2);
+        }
+        else {
+            System.out.println("The battle is tough...");
+            System.out.println("Player loses the battle and loses 1 Health point.");
+            player.decreaseHealth();
+        }
+       
+        System.out.println(player.toString());
+
+        }
+
+   
+
 }
