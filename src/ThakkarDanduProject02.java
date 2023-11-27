@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author S538302
  */
-public class Project2 {
+public class ThakkarDanduProject02 {
     
      private static Player player;
     private static final Random rand = new Random();
