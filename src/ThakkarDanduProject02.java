@@ -1,6 +1,5 @@
 
-import java.util.Random;
-import java.util.Scanner;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,9 +10,12 @@ import java.util.Scanner;
  *
  * @author S538302
  */
+import java.util.Random;
+import java.util.Scanner;
+
 public class ThakkarDanduProject02 {
     
-     private static Player player;
+    private static Player player;
     private static final Random rand = new Random();
     private static final Scanner input = new Scanner(System.in);
     
