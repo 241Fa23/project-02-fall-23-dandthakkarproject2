@@ -7,7 +7,7 @@
  *
  * @author S538302
  */
-public class Player {
+public abstract class Player {
     
      private int health = 10;
     private int score = 0;

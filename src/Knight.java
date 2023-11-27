@@ -7,7 +7,7 @@
  *
  * @author S538302
  */
-public class Knight {
+public class Knight extends Player {
     public Knight(int health, int score){
         super(health, score);
     }
