@@ -14,15 +14,18 @@ public class Wizard extends Player{
         super(health, score);
     }
    
+        @Override
     public String getSpecialMove() {
         return "Cast a Spell";
     }
 
    
+        @Override
     public void useSpecialMove() {
         System.out.println("The Wizard casts a spell, unleashing a dazzling display of arcane power!");
     }
    
+        @Override
     public String toString(){
         return "\n" + "Wizard Status: \n" + super.toString() + "\nThe Wizard's special move is '" + getSpecialMove() + "'" + "\n";
     }
