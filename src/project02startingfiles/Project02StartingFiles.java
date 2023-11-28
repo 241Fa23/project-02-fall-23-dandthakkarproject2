@@ -10,7 +10,7 @@ package project02startingfiles;
  * @author 
  */
 import java.util.*;
-public class Project2 {
+public class Project02StartingFiles {
 
     /**
      * @param args the command line arguments
