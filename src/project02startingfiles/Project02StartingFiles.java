@@ -94,3 +94,74 @@ public class Project2 {
             
         }
     }
+    
+ public static void move(){
+        int num = rand.nextInt(100);
+       
+       
+        if (num < 20) {
+            encounterFoe();
+        }
+       
+        else {
+            player.increaseScore(1);
+            String[] scenes = {"Nothing here...", "Nice trees around here...", "Interesting cottage there...", "Potty break..."};
+            System.out.println("********************");
+            System.out.println(scenes[rand.nextInt(scenes.length)]);
+            System.out.println("********************");
+        }
+    }
+   
+    public static void encounterFoe() {
+       
+   
+        String[] foes = {"zombie", "bandit", "lobbyist"};
+        System.out.println("Oh no! You are being attacked by a " + foes[rand.nextInt(foes.length)] + "!");
+        System.out.println("How would you like to handle this?\n{s}Special Move || {r}Run!");
+        System.out.print(">>");
+        String option = input.next();
+       
+        if (option.equals("r")) {
+            if (rand.nextBoolean() == true) {
+                System.out.println("You successfully ran away!");
+                player.increaseScore(1);
+            }
+           
+            else {
+                System.out.println("You failed to run away! The battle begins!");
+                battle();
+            }
+         }
+        else if (option.equals("s")) {
+                battle();
+        }
+    }
+         
+    public static void battle() {
+       
+        System.out.println("Prepare for battle!");
+        System.out.println("Press any letter then ENTER to continue...");
+        System.out.print(">>");
+        input.next();
+        System.out.println("***********************************");
+
+        player.useSpecialMove();
+       
+        boolean wins = rand.nextInt(100) < 60; // 60% chance to win the battle
+       
+        if(wins == true){
+            System.out.println("Player wins! Increase score by 2 points!");
+            player.increaseScore(2);
+        }
+        else {
+            System.out.println("The battle is tough...");
+            System.out.println("Player loses the battle and loses 1 Health point.");
+            player.decreaseHealth();
+        }
+       
+        System.out.println(player.toString());
+
+        }
+}
+    
+
